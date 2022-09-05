@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="logo">
+                Photo<span>Dekho</span>.com
+            </div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="icon">
+                <i class="fa fa-search"></i>
+                <a href="#">LogIn</a>
+            </div>
+
+
+        </nav>
+        <section class="h-text">
+            <i class="fa fa-camera" id="camera"></i>
+            <h1 data-aos="fade-up">Capturing the moment that can melt your heart</h1>
+            <input type="text" name="" placeholder="Search here...">
+            <button><i class="fa fa-search"></i></button>
+        </section>
+    </header>
+    <section class="filter-gallery">
+        <div class="portfolio-menu">
+            <ul>
+                <li class="active" data-filter="*">All</li>
+                <li data-filter=".nature">Nature</li>
+                <li data-filter=".faishon">Faishon</li>
+                <li data-filter=".wedding">Wedding</li>
+            </ul>
+        </div>
+        <div class="portfolio-item" >
+            <div class="item nature">
+                <img src="img/p1.jpg" alt="" width="100" height="100">
+            </div>
+            <div class="item faishon" >
+                <img src="img/p2.jpg" alt="" width="100" height="100">
+            </div>
+            <div class="item wedding" >
+                <img src="img/p3.jpg" alt="">
+            </div>
+            <div class="item nature" >
+                <img src="img/p4.jpg" alt="" width="100" height="100">
+            </div>
+            <div class="item faishon">
+                <img src="img/p5.jpg" alt="" width="100" height="100">
+            </div>
+            <div class="item wedding" >
+                <img src="img/p6.jpg" alt="">
+            </div>
+            <div class="item nature">
+                <img src="img/p7.jpg" alt="" width="100" height="100">
+            </div>
+            <div class="item faishon" >
+                <img src="img/p8.jpg" alt="" width="100" height="100">
+            </div>
+            <div class="item wedding">
+                <img src="img/p9.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script>
+        $('.portfolio-item').isotope({
+            // options
+            itemSelector: '.item',
+            layoutMode: 'fitRows'
+        });
+        $('.portfolio-menu ul li').click(function () {
+            $('.portfolio-menu ul li').removeClass('active');
+            $(this).addClass('active');
+
+            var selector = $(this).attr('data-filter');
+            $('.portfolio-item').isotope({ filter: selector })
+        });
+        // return false;
+        
+        </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script>
+
+    <section class="member">
+        <div class="member-info"  >
+            <h1>Our <span>Informations</span></h1>
+            <p>What our member says</p>
+        </div>
+        <div class="member-card" >
+            <img id="profile" src="img/member.jpg" alt="">
+            <h2>Amit kumar sharma</h2>
+            <p>We always try to connect your soul with our photography. <br>
+                our photographers are exploring every corner of the world to provide you the most beautiful clicks ever
+                taken.
+
+            </p>
+            <a href="https://www.facebook.com/profile.php?id=100011701026375&sk=about" target=”_blank”>
+                <img src="img/icon1.png" alt="" width="100">
+            </a>
+            <a href="https://www.instagram.com/amitkumarsharma05120/" target=”_blank”>
+                <img src="img/icon2.png" alt="" width="100">
+            </a>
+            <img src="img/icon3.png" alt="" width="100">
+            <img src="img/icon4.png" alt="" width="100">
+        </div>
+        <div class="team">
+            <h3>Our team</h3>
+        </div>
+        <div class="m-images">
+            <a href="https://www.facebook.com/profile.php?id=100007524336017" target="_blank">
+                <img src="img/s1.jpg" alt="">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100049014606535" target="_blank">
+                <img src="img/s2.jpg" alt="">
+            </a>
+            <a href="https://www.facebook.com/ujjwal.singhrajput.351756" target="_blank">
+                <img src="img/s3 (2).jpg" alt="">
+            </a>
+            <!-- <img src="img/s4.jpg" alt="">
+            <img src="img/s5.jpg" alt="">
+            <img src="img/s6.jpg" alt=""> -->
+        </div>
+        <div>
+            <h6>click on the photos to visit their profile</h6>
+        </div>
+    </section>
+    <footer>
+        <div class="newsletter">
+            <div>
+                <h2>Subsbscribe our newsLetter</h2>
+                <p>We are a team of engineers whom obviously you gonna love </p>
+            </div>
+            <div class="ntext">
+                <label for="">
+                    <input type="email" namr="" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </label>
+            </div>
+        </div>
+        <div class="f-contact" >
+            <div>
+                <h1>Information</h1>
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, sed enim. Repellendus vel magnam consequatur!</p>
+                <i class="fa fa-whatsapp"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-telegram"></i>
+                <i class="fa fa-twitter"></i>
+            </div>
+            <div class="foo-up">
+                <h1>Usefull links</h1>
+                <p>Abou us</p>
+                <p>Gallery</p>
+                <p>Blog posts</p>
+                <p>Pricing plans</p>
+            </div>
+            <div class="foo-up">
+                <h1>Details</h1>
+                <p>Photographers</p>
+                <p>Gallery</p>
+                <p>About</p>
+                <p>Pricing plans</p>
+            </div>
+            <div class="foo-up">
+                <h1>Help & Support</h1>
+                <p>Terms & conditions</p>
+                <p>Technival Support</p>
+                <p>Customer Care</p>
+            </div>
+        </div>
+     
+    </footer>
+    
+</body>
+
+</html>
